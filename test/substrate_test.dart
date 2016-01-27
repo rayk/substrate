@@ -3,19 +3,19 @@
 
 library substrate.test;
 
-import 'package:substrate/substrate.dart';
+import 'package:substrate/client.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('A group of tests', () {
-    Awesome awesome;
-
+  group('Counter :\t', () {
     setUp(() {
-      awesome = new Awesome();
+
     });
 
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
+    test('Should load the old number which have been counted.', () {
+
     });
+
+
   });
 }

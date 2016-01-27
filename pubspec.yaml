@@ -7,11 +7,15 @@ author: Ray King <taipan.king@gmail.com>
 environment:
   sdk: '>=1.0.0 <2.0.0'
 
-#dependencies:
-#  lib_name: any
+dependencies:
+  browser: '>=0.10.0 <0.11.0'
+  dart_to_js_script_rewriter: '^0.1.0'
+  lookup_map: "^0.0.1"
+
 
 dev_dependencies:
-  test: '>=0.12.0 <0.13.0'
+  args: "^0.13.2"
+  barback: '^0.15.2'
   changelog: "^1.3.2"
   coverage: "^0.7.2"
   dart_dev: "^1.0.0"
@@ -19,10 +23,17 @@ dev_dependencies:
   dartdoc: "^0.6.3"
   faker: "^0.0.2"
   glob: "^1.0.5"
-  lookup_map: "^0.0.1"
   mustache: "^0.2.3"
   path: "^1.3.6"
   petitparser: "^1.4.3"
+  script_inliner: "^1.0.0"
   test: '>=0.12.0 <0.13.0'
+  uuid: "^0.5.0"
   validator: "^0.0.7"
+  js: '^0.6.0'
   yaml: "^2.1.5"
+
+transformers:
+- dart_to_js_script_rewriter
+- $dart2js
+- script_inliner

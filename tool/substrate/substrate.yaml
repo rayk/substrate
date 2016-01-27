@@ -1,0 +1,31 @@
+# Substrate configuration file allows for the setting of build tiime variables.
+# the configuration is nested by category, then the configuration variable
+# value and a explaination as what the variable is.
+
+coreConfiguration:
+  paths:
+    generatedConfiguration: '/lib/src/services/config'
+    codeTemplates: '/tool/substrate/resources/'
+  files:
+    generatedLookUp: 'substrate_lookup.dart'
+
+timeOuts:
+  futureCompleteTimeOut:
+    value: '40'
+    description: 'Sets a ms timeout for each future to complete before it is considered a failure.'
+  futureBackOffDelay:
+    value: '0.5'
+    description: 'Exponential backoff rate between retries'
+  futureRetryAttempts:
+    value: '3'
+    description: 'Number of retries before logging fatal error'
+
+serviceWorker:
+  codePath:
+    value: '/web'
+    description: 'The path where there workcode will be located'
+  fileName:
+    value: 'substrate-service-worker'
+    description: 'Name of the file contains the service worker code'
+
+
